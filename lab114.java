@@ -1,7 +1,9 @@
 /**
- * HelloWorld
+Lab 114: Hello World Write a program that outputs "Hello World!" For ALL labs,
+end with newline (unless otherwise stated).
  */
-public class HelloWorld {
+
+public class lab114 {
 
     public static void main(String[] args) {
         System.out.println("Hello World");

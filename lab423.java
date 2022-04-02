@@ -1,3 +1,26 @@
+/*
+4.23 LAB: Varied amount of input data
+
+Statistics are often calculated with varying amounts of input data.
+
+Write a program that takes any number of non-negative integers as input, and
+outputs the summation and average except the min and max value. A negative
+integer ends the input and is not included in the statistics. Assume the input
+contains at least one non-negative integer.
+
+When the number of input is less than or equal to 2, the summation and average
+is 0 and 0.00 respectively. Output the average with two digits after the decimal
+point followed by a newline, which can be achieved as follows:
+System.out.printf("%.2f\n", average);
+
+Ex: When the input is:
+
+15 20 0 3 -1 the output is:
+
+18 9.00 Explanation: Except 20(max), 0 (min) among 15 20 0 3, sum = 18, average
+= 9.00
+*/
+
 import java.util.Scanner; 
 
 public class lab423 {

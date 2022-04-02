@@ -1,3 +1,15 @@
+/*
+Assignment 3-2: FInd the Max Number:
+
+Find the greatest number among three random numbers. To find the greatest
+number, use the if-else if or nested if statements To generate random numbers,
+use the Class java.util.Random Random numbers should be between 0 and 100 Print
+all three random numbers Print the greatest number Run Example The generated
+random number: 10, 97, 45 The greatest number: 97 Submit your program in Github
+Classroom Submit your flow chart and elaboration on your algorithm in Canvas use
+the online flowchart tool https://draw.io 
+*/
+
 import java.util.Random;
 
 public class maxNumber {

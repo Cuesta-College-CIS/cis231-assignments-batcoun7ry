@@ -36,32 +36,36 @@ public class quiz1_2_1 {
         // print array for debugging:
 	    System.out.println(Arrays.toString(numbers));
 
-        // loop through array to find min element:
-        minval = numbers[1];
-        minidx = numbers[1];
-        for (int i = 0; i < N; i++) {
-            if (numbers[i] < minval) {
-                minval = numbers[i];
-                minidx = i; // save index of minval
+        // parent loop for switching first 5 elements:
+        for (int p = 0; p < CNT; p++) {
+
+            // loop through array to find min element:
+            minval = numbers[p];
+            minidx = numbers[p];
+            for (int i = p; i < N; i++) {
+                if (numbers[i] < minval) {
+                    minval = numbers[i];
+                    minidx = i; // save index of minval
+                }
             }
-        }
 
-        // print minval & minidx for debugging:
-        System.out.println(
-            "minval: " + minval + "\n" +
-            "minidx: " + minidx
-        );
+            // print minval & minidx for debugging:
+            System.out.println(
+                "minval: " + minval + "\n" +
+                "minidx: " + minidx
+            );
 
-        // switch numbers[0] with minval:
-        tmp = numbers[0];
-        numbers[0] = minval;
-        numbers[minidx] = tmp;
+            // switch numbers[0] with minval:
+            tmp = numbers[p];
+            numbers[p] = minval;
+            numbers[minidx] = tmp;
 
-        // print numbers[]:
-        System.out.println(Arrays.toString(numbers));
+            // print numbers[]:
+            System.out.println(Arrays.toString(numbers));
 
-        // close scanner:
-		scnr.close();
+        } // close parent loop
+
+		scnr.close(); // close scanner:
 	}
 }
 

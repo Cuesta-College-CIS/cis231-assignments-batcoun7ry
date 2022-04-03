@@ -52,6 +52,14 @@ public class quiz1_2_1 {
             "minidx: " + minidx
         );
 
+        // switch numbers[0] with minval:
+        tmp = numbers[0];
+        numbers[0] = minval;
+        numbers[minidx] = tmp;
+
+        // print numbers[]:
+        System.out.println(Arrays.toString(numbers));
+
         // close scanner:
 		scnr.close();
 	}

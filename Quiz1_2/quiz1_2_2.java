@@ -9,12 +9,12 @@ Matrix 1 = L * M; (3 * 3) (Check code for values)
 Matrix 2 = M * N; (3 * 2) (Check code for values)
 
 Take user imput for row index of matrix 1. That row is itself an array in which
-each element is to be multiplied with each element of each column of matrix 2.
-Each multiplication of each column number should be added, yeilding  one
-output nunmber per collumn. For example:
+each element is to be multiplied with each element of each column of matrix 2
+respectivly. Add all multiplications per column, yeilding one output number per
+column. For example:
 
 User input is 1, so we need the array in row index 1 of matrix 1, which is 
-{3, 6, 9}. Then we multiply:
+{3, 6, 9}. Then we multiply and add those values by the values in each column:
 ((3 * 10) + (6 * 30) + (9 * 50)) = 660 (our first output number).
 ((3 * 20) + (6 * 40) + (9 * 60)) = 840 (our second output number).
 */
@@ -40,7 +40,8 @@ public class quiz1_2_2 {
         };
 		int rowidx = scnr.nextInt();
 
-		// Your code
+		// print rowidx or matrix1 for debugging:
+        System.out.println(Arrays.toString(matrix1[rowidx]));
 
 	}
 }

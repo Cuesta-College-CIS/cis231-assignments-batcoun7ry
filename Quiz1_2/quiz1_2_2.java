@@ -28,20 +28,31 @@ public class quiz1_2_2 {
 		final int L = 3; // will NOT use L. Just for the extendability.
 		final int M = 3;
 		final int N = 2;
+        int output1 = 0;
+        int output2 = 0;
 		int[][] matrix1 = { 
-                { 2, 5, 10 },
-				{ 3, 6, 9 },
-				{ 1, 2, 3 } 
+            { 2, 5, 10 },
+			{ 3, 6, 9 },
+			{ 1, 2, 3 } 
         };
 		int[][] matrix2 = { 
-                { 10, 20 },
-				{ 30, 40 },
-				{ 50, 60 } 
+            { 10, 20 },
+			{ 30, 40 },
+			{ 50, 60 } 
         };
 		int rowidx = scnr.nextInt();
 
-		// print rowidx or matrix1 for debugging:
-        System.out.println(Arrays.toString(matrix1[rowidx]));
+        // get first output number:
+        for (int i = 0; i < M; i++) {
+            output1 += matrix1[rowidx][i] * matrix2[i][0];
+        }
 
+        // get second output number:
+        for (int i = 0; i < M; i++) {
+            output2 += matrix1[rowidx][i] * matrix2[i][1];
+        }
+
+        // print output numbers:
+        System.out.print(output1 + " " + output2);
 	}
 }

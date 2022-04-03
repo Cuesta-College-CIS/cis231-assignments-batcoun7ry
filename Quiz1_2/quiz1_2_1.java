@@ -1,5 +1,5 @@
 /*
-Question 1 : Find the i-th smallest number:
+Quiz 1_2_Question 1 : Find the i-th smallest number:
 
 This program will take 10 user inputs and construct an integer array
 Input begins with the number of elements 10 followed by 10 integer values
@@ -42,7 +42,7 @@ public class quiz1_2_1 {
         for (int i = 0; i < N; i++) {
             if (numbers[i] < minval) {
                 minval = numbers[i];
-                i = minidx; // save index of minval
+                minidx = i; // save index of minval
             }
         }
 

@@ -41,7 +41,7 @@ public class quiz1_2_1 {
 
             // loop through array to find min element:
             minval = numbers[p];
-            minidx = numbers[p];
+            minidx = p;
             for (int i = p; i < N; i++) {
                 if (numbers[i] < minval) {
                     minval = numbers[i];
@@ -62,6 +62,10 @@ public class quiz1_2_1 {
 
             // print numbers[]:
             System.out.println(Arrays.toString(numbers));
+
+            if (p == CNT) {
+                break;
+            }
 
         } // close parent loop
 

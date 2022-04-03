@@ -34,7 +34,7 @@ public class quiz1_2_1 {
         }
 
         // print array for debugging:
-	    System.out.println(Arrays.toString(numbers));
+	    //System.out.println(Arrays.toString(numbers));
 
         // parent loop for switching first 5 elements:
         for (int p = 0; p < CNT; p++) {
@@ -50,10 +50,10 @@ public class quiz1_2_1 {
             }
 
             // print minval & minidx for debugging:
-            System.out.println(
-                "minval: " + minval + "\n" +
-                "minidx: " + minidx
-            );
+            //System.out.println(
+            //    "minval: " + minval + "\n" +
+            //    "minidx: " + minidx
+            //);
 
             // switch numbers[0] with minval:
             tmp = numbers[p];
@@ -62,10 +62,6 @@ public class quiz1_2_1 {
 
             // print numbers[]:
             System.out.println(Arrays.toString(numbers));
-
-            if (p == CNT) {
-                break;
-            }
 
         } // close parent loop
 

@@ -23,6 +23,23 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class quiz2_2_1 {
+
+    public static int[] constructArray(Scanner scnr) {
+
+    }
+
+    public static void printArray(int[]) {
+
+    }
+
+    public static int findMoreEvens(int[] n1, int[] n2) {
+
+    }
+
+    public static int findGreatest(int[] n1, int[] n2) {
+
+    }
+
 	public static void main(String[] args) {
 		//Scanner scnr = new Scanner(System.in);
         System.out.print("test");

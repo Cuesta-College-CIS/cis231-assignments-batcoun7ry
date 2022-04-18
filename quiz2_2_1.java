@@ -135,8 +135,8 @@ public class quiz2_2_1 {
         int arraysMax = 0;
         if (array1Max > array2Max) {
             arraysMax = array1Max;
-        } else if (array1Max == array2Max) { // check if both arrays have equal max value, report > 99 if true
-            arraysMax = 101; // THIS DOES NOT WORK
+        //} else if (array1Max == array2Max) { // check if both arrays have equal max value, report > 99 if true
+        //    arraysMax = 101; // THIS DOES NOT WORK (^Bad idea because I loose the value of their equal!)
         } else {
             arraysMax = array2Max;
         }
@@ -169,11 +169,11 @@ public class quiz2_2_1 {
         }
 
         // print which array has the greatest value element, report the value
-        int tmp = findGreatestValue(array1, array2); // had to make this variable since you cant put a function call in a conditional
-        if (tmp > 99) { // check to see if both array's max value is equal
-            System.out.println("Both arrays share greatest value: " + findGreatestValue(array1, array2));
-        } else { // print most likely outcome (array 1 & 2  max value will be different)
+        //int tmp = findGreatestValue(array1, array2); // had to make this variable since you cant put a function call in a conditional
+        //if (tmp > 99) { // check to see if both array's max value is equal
+        //    System.out.println("Both arrays share greatest value: " + findGreatestValue(array1, array2));
+        //} else { // print most likely outcome (array 1 & 2  max value will be different)
         System.out.println("Array " + findGreatest(array1, array2) + " has greatest value: " + findGreatestValue(array1, array2));
-        }
+        //}
 	}
 }

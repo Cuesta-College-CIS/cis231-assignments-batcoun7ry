@@ -18,7 +18,6 @@ Make program that has 4 user-defined functions to:
         // output example: Array 1 has the greatest value 99
 */
 
-
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
@@ -42,11 +41,13 @@ public class quiz2_2_1 {
         return array;
     }
 
+
     // print all elements in each array
     public static void printArray(int[] array) {
 
         System.out.println(Arrays.toString(array));
     }
+
 
     // determine which array has more even numbers and return the array number
     public static int findMoreEvens(int[] n1, int[] n2) {
@@ -77,10 +78,20 @@ public class quiz2_2_1 {
         }
     }
 
-    // derermine which array has the grteatest value and return the array number
-    // public static int findGreatest(int[] n1, int[] n2) {
 
-    //}
+    // determine which array has the greatest value and return the array number
+    public static int findGreatest(int[] n1, int[] n2) {
+
+        // find max value in array 1
+        int array1Max = 0;
+        for (int i = 0; i < n1.length; i++) {
+            if (n1[i] > array1Max) {
+                array1Max = n1[i];
+            }
+        }
+        return array1Max; 
+    }
+
 
 	public static void main(String[] args) {
 
@@ -104,5 +115,11 @@ public class quiz2_2_1 {
         } else { // print array with most even elements
             System.out.println("Both arrays have an equal number of even elements.");
         }
+
+        // print which array has the greatest value element, include the value
+        //int greatestValueArray;
+        //int greatestValue;
+        System.out.println("max value in array1 is: " + findGreatest(array1, array2));
+
 	}
 }

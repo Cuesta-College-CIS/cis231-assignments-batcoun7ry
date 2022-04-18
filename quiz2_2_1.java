@@ -136,7 +136,7 @@ public class quiz2_2_1 {
         if (array1Max > array2Max) {
             arraysMax = array1Max;
         } else if (array1Max == array2Max) { // check if both arrays have equal max value, report > 99 if true
-            arraysMax = 101;
+            arraysMax = 101; // THIS DOES NOT WORK
         } else {
             arraysMax = array2Max;
         }

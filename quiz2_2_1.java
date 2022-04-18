@@ -16,6 +16,9 @@ Make program that has 4 user-defined functions to:
     (4) public static int findGreatest(int[] n1, int[] n2)
         // in main function, print the array number and the greatest value together
         // output example: Array 1 has the greatest value 99
+
+    // (5) bonus function: determine greatest value among both arrays
+    //... becuase I dont know how to return multiple values!
 */
 
 import java.util.Arrays;
@@ -79,7 +82,7 @@ public class quiz2_2_1 {
     }
 
 
-    // determine which array has the greatest value and return the array number
+    // determine which array has the greatest value 
     public static int findGreatest(int[] n1, int[] n2) {
 
         // find max value in array 1
@@ -89,7 +92,56 @@ public class quiz2_2_1 {
                 array1Max = n1[i];
             }
         }
-        return array1Max; 
+
+        // find max value in array 2
+        int array2Max = 0;
+        for (int i = 0; i < n2.length; i++) {
+            if (n2[i] > array1Max) {
+                array2Max = n2[i];
+            }
+        }
+
+        //compare array1Max with array2Max, report array with greater max
+        if (array1Max > array2Max) {
+            return 1;
+        } else if (array1Max == array2Max){
+            return 12;
+        } else {
+            return 2;
+        }
+    }
+
+
+    // determine the greatest value among both arrays
+    public static int findGreatestValue(int[] n1, int[] n2) {
+
+        // find max value in array1
+        int array1Max = 0;
+        for (int i = 0; i < n1.length; i++) {
+            if (n1[i] > array1Max) {
+                array1Max = n1[i];
+            }
+        }
+
+        // find max value in array2
+        int array2Max = 0;
+        for (int i = 0; i < n2.length; i++) {
+            if (n2[i] > array2Max) {
+                array2Max = n2[i];
+            }
+        }
+
+        //compare max value in both arrays
+        int arraysMax = 0;
+        if (array1Max > array2Max) {
+            arraysMax = array1Max;
+        } else if (array1Max == array2Max) { // check if both arrays have equal max value, report > 99 if true
+            arraysMax = 101;
+        } else {
+            arraysMax = array2Max;
+        }
+        // determine 
+        return arraysMax; // return max value
     }
 
 
@@ -116,10 +168,12 @@ public class quiz2_2_1 {
             System.out.println("Both arrays have an equal number of even elements.");
         }
 
-        // print which array has the greatest value element, include the value
-        //int greatestValueArray;
-        //int greatestValue;
-        System.out.println("max value in array1 is: " + findGreatest(array1, array2));
-
+        // print which array has the greatest value element, report the value
+        int tmp = findGreatestValue(array1, array2); // had to make this variable since you cant put a function call in a conditional
+        if (tmp > 99) { // check to see if both array's max value is equal
+            System.out.println("Both arrays share greatest value: " + findGreatestValue(array1, array2));
+        } else { // print most likely outcome (array 1 & 2  max value will be different)
+        System.out.println("Array " + findGreatest(array1, array2) + " has greatest value: " + findGreatestValue(array1, array2));
+        }
 	}
 }

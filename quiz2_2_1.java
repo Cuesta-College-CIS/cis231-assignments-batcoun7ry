@@ -62,15 +62,15 @@ public class quiz2_2_1 {
         // loop through array2, count evens
         int countEven2 = 0;
         for (int i = 0; i < n2.length; i++) {
-            if (n1[i] % 2 == 0) {
-                countEven1 += 1;
+            if (n2[i] % 2 == 0) {
+                countEven2 += 1;
             }
         }
 
         // compare both arrays, return array with greatest evens
         if (countEven1 > countEven2) {
             return 1;
-        } else if (countEven1 == countEven2); {
+        } else if (countEven1 == countEven2) {
             return 12;
         } else {
             return 2;
@@ -98,9 +98,11 @@ public class quiz2_2_1 {
         printArray(array2);
 
         // print which array has most even elements
-        int even = findMoreEvens(array1, array2);
-        System.out.println("Array " + even + " has the most even elements.");
-
-
+        int evenistArray = findMoreEvens(array1, array2);
+        if (evenistArray < 3) { // detect if both arrays have equal even elements
+            System.out.println("Array " + evenistArray + " has the most even elements.");
+        } else { // print array with most even elements
+            System.out.println("Both arrays have an equal number of even elements.");
+        }
 	}
 }

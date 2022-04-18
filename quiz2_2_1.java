@@ -31,6 +31,7 @@ public class quiz2_2_1 {
     public static int[] constructArray(Scanner scnr) {
 
         Random randGen = new Random(); // make random number generator
+        System.out.print("Enter number of elements for Array1:");
         int N = scnr.nextInt(); // get user's N
         int [] array = new int[N]; // make array with N elements
 
@@ -63,9 +64,6 @@ public class quiz2_2_1 {
 		Scanner scnr = new Scanner(System.in);
         int [] array1;
         array1 = constructArray(scnr);
-
-        // print array1
-        //array1 = constructArray();
         printArray(array1);
 
 

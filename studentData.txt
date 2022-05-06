@@ -10,6 +10,6 @@ CIS02   Python  3   A0
 CIS232  Java2   3   A+
 CNT02   Cisco   3   A0
 1003    Kim
-3
+2
 CIS01   C++     3   A0
 CIS232  Java2   3   A+

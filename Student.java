@@ -4,7 +4,11 @@ public class Student {
 	String sname;
 	ArrayList<Course> clist;
 
-	Student(Integer id, String name, ArrayList<course> c) {
+	// Constructor? Why no "public" before student?
+	Student(Integer id, String name, ArrayList<Course> c) {
+		sid = id;
+		sname = name;
+		clist = c;
 
 	}
 

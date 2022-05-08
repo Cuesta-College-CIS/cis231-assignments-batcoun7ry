@@ -6,17 +6,17 @@ public class Student {
 	private Integer studentID = -1;
 	private String studentName = "no name";
 	private Integer studentCredits = 0;
-	private ArrayList<Course> studentCourses = new ArrayList<Course>();
+	ArrayList<Course> studentCourses = new ArrayList<Course>();
 	private String studentSummary = "blank";
 
 
-	// constructor initilizes Student's ID and name:
+	// constructor sets Student's ID and name:
 	public Student(Integer id, String name) {
 		studentID = id;
 		studentName = name;
 	}
 
-	// setter: add a course to Student object's ArrayList of courses:
+	// setter: add a course object to Student object's ArrayList of courses:
 	public void addStudentCourse(Course course) {
 		this.studentCourses.add(course);
 	}
@@ -36,7 +36,7 @@ public class Student {
 		return studentCourses;
 	}
 
-	// getter: retrun Integer of total credits for Student object:
+	// getter: return Integer of total credits for Student object:
 	public Integer getStudentCredits() {
 		return studentCredits;
 	}

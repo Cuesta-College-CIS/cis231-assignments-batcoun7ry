@@ -45,7 +45,7 @@ public class Quiz4_1_1 {
         return studentList;
     } */
 
-    public static ArrayList<Student> fillStudentList() throws IOException {
+    public static ArrayList<Student> fillStudentList()  throws IOException {
 
         // set up file input:
         FileInputStream fileByteStream = null;
@@ -55,13 +55,15 @@ public class Quiz4_1_1 {
         Integer studentID;
         String studentName;
         Integer studentCourseTally;
-        Integer studentCredits;
         String studentGrade;
         
         // course variables to be assigned from studentData.txt:
         String courseID;
         String courseName;
         Integer courseCredit;
+
+        // school enrolment: ArrayList of students enrolled at school:
+        ArrayList<Student> studentList = new ArrayList<Student>();
 
         // parse data from studentData.txt
         fileByteStream  = new FileInputStream("studentData.txt");
@@ -77,7 +79,7 @@ public class Quiz4_1_1 {
             studentCourseTally = inFS.nextInt();
 
             for (int i = 0; i < studentCourseTally; i++) {
-                // collect one row of student's course data (one course):
+                // collect one row of student's course data (i.e. one course):
                 courseID = inFS.next();
                 courseName = inFS.next();
                 courseCredit = inFS.nextInt();
@@ -85,22 +87,23 @@ public class Quiz4_1_1 {
                 // populate a Course object with above data:
                 Course currentCourse = new Course(  courseID, courseName, 
                                                     courseCredit, studentGrade);
-                // push above course object into currentStudent's arrayList of courses:
+                // push above course object into currentStudent's ArrayList of courses:
                 currentStudent.addStudentCourse(currentCourse);
             }
 
-
+            // add complete Student object to an ArrayList of Students called studentList:
+            studentList.add(currentStudent);
         }
 
-
-        fileByteStream.close();
         inFS.close(); // vscode gets mad if I dont have this
+        fileByteStream.close();
+        
 
         return studentList;
 
     }
 
-    // print 
+/*     // print 
     public static void printStudent(ArrayList<Student> studentList) {
         // code:
     }
@@ -112,18 +115,16 @@ public class Quiz4_1_1 {
     public static Integer findStudent(ArrayList<Student> studentList) {
         // code:
         return studentID;
-    }
+    } */
 
 
 	public static void main(String args[]) {
-        ArrayList<Student> studentList = new ArrayList<Student>();
-        ArrayList<Course> courseList = new ArrayList<Course>();
 
+        ArrayList <Student> studentList = fillStudentList();
+        //printStudent =(studentList);
+        //studentID = findStudent(studentList);
 
-        studentList = fillStudentList();
-        printStudent =(studentList);
-        studentID = findStudent(studentList);
-
-        printStudent(studentList, studentID);
+        //printStudent(studentList, studentID);
+        System.out.print(studentList);
     }
 }

@@ -103,12 +103,17 @@ public class Quiz4_1_1 {
 
     }
 
-/*     // print 
+    // print studentList:
     public static void printStudent(ArrayList<Student> studentList) {
-        // code:
+        
+        // iterate throguh studentList and print each Student object's fields/attributes:
+        for (int i = 0; i < studentList.size(); i++) {
+            System.out.print(studentList.get(i).getStudentName());
+        } // this is still printing only three student memory adresses. why?
+        
     }
 
-    public static void printStudent(ArrayList<Student> studentList, Integer studentID) {
+/*     public static void printStudent(ArrayList<Student> studentList, Integer studentID) {
         // Code:
     }
 

@@ -108,7 +108,7 @@ public class Quiz4_1_1 {
         
         // iterate throguh studentList and print each Student object's fields/attributes:
         for (int i = 0; i < studentList.size(); i++) {
-            System.out.print(studentList.get(i).getStudentName());
+            System.out.print("Student name: " + studentList.get(i).getStudentName());
         } // this is still printing only three student memory adresses. why?
         
     }
@@ -130,6 +130,6 @@ public class Quiz4_1_1 {
         //studentID = findStudent(studentList);
 
         //printStudent(studentList, studentID);
-        System.out.print(studentList);
+        printStudent(studentList);
     }
 }

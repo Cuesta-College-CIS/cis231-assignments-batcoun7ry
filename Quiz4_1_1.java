@@ -108,9 +108,16 @@ public class Quiz4_1_1 {
         
         // iterate throguh studentList and print each Student object's fields/attributes:
         for (int i = 0; i < studentList.size(); i++) {
-            System.out.printf("Student ID: %-6s%-10s", studentList.get(i).getStudentID() ,
-                                     "Student Name: " + studentList.get(i).getStudentName() + "\n");
-        } 
+            // Student ID and name:
+            System.out.printf("Student: %-6s%-10s", studentList.get(i).getStudentID(),
+            studentList.get(i).getStudentName());
+            System.out.print("\n");
+            // Iterate thorugh and print Student courses, line by line:
+            for (int j = 0; j < studentList.get(i).studentCourses.size(); j++) {
+                System.out.print(studentList.get(i).studentCourses.get(j)); // This does not work
+            }
+            
+        }
         
     }
 

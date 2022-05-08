@@ -1,26 +1,52 @@
+import java.util.ArrayList;
 
 public class Student {
-	Integer sid;
-	String sname;
-	ArrayList<Course> clist;
 
-	// Constructor? Why no "public" before student?
-	Student(Integer id, String name, ArrayList<Course> c) {
-		sid = id;
-		sname = name;
-		clist = c;
+	// Student objects's fields/attributes:
+	private Integer studentID = -1;
+	private String studentName = "no name";
+	private Integer studentCredits = 0;
+	private ArrayList<Course> studentCourses = new ArrayList<Course>();
+	private String studentSummary = "blank";
 
+
+	// constructor initilizes Student's ID and name:
+	public Student(Integer id, String name) {
+		studentID = id;
+		studentName = name;
 	}
 
+	// setter: add a course to Student object's ArrayList of courses:
+	public void addStudentCourse(Course course) {
+		this.studentCourses.add(course);
+	}
+
+	// getter: return Integer of Student object ID:
+	public Integer getStudentID() {
+		return studentID;
+	}
+
+	// getter: return String of Student object name:
+	public String getStudentName() {
+		return studentName;
+	}
+
+	// getter: return ArrayList of Student object courses:
+	public ArrayList<Course> getStudentCourses() {
+		return studentCourses;
+	}
+
+	// getter: retrun Integer of total credits for Student object:
+	public Integer getStudentCredits() {
+		return studentCredits;
+	}
+
+/* 	// getter: print string of Student object attributes:
 	public String toString() {
-		//print student object:
-		return someString;
-	}
+		// TODO: make studentSummary string
 
-	public Integer getTotalCredits() {
-		//retrun total credits for Student object:
-		return someInt;
-	}
+		return studentSummary;
+	} //(is this unnecessary given main class has something simmilar?)*/
 
 }
 

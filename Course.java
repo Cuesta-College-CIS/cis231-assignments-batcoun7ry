@@ -1,12 +1,20 @@
+import java.util.ArrayList;
 
 public class Course {
-	String cid;
-	String cname;
-	Integer credit;
-	String grade;
 
-	Course(String id, String name, Integer c, String g) { 
-		//code:
+	// Course object fields/attributes:
+	private String courseID;
+	private String courseName;
+	private Integer courseCredit;
+	private String grade; 
+	private ArrayList<Student> courseEnrolment; // why "ArrayList cannot be resolved to a type"?
+
+	// constructor initilizes course ID, name, credits, and enrolment:
+	public Course(String courseID, String courseName, Integer courseCredit, String studentGrade) {
+		this.courseID = courseID;
+		this.courseName = courseName;
+		this.courseCredit = courseCredit;
+		this.grade = grade;
 	}
 
 	public String toString() {

@@ -31,7 +31,7 @@ public class Student {
 		return studentName;
 	}
 
-	// getter: return String of Student object courses:
+/* 	// getter: return String of Student object courses:
 	public String getStudentCourses() {
 		String printStudentCourses = " ";
 		for (int i = 0; i < studentCourses.size(); i++) {
@@ -39,24 +39,28 @@ public class Student {
 
 		}
 		return printStudentCourses;
-	}
+	} */
 
-	// getter: return ArrayList of Student object courses:
+/* 	// getter: return ArrayList of Student object courses:
 	public ArrayList<Course> getStudentCoursesAL() {
 		return studentCourses;
-	}
+	} */
 
 	// getter: return Integer of total credits for Student object:
 	public Integer getStudentCredits() {
+		Integer creditSum = 0;
+		for (int i = 0; i < studentCourses.size(); i++) {
+			creditSum += studentCourses.get(i).courseCredit;
+			}
 		return studentCredits;
 	}
 
-	// getter: print string of Student object attributes:
+/* 	// getter: print string of Student object attributes:
 	public String toString() {
 		// TODO: make studentSummary string
 
 		return studentSummary;
-	} //(is this unnecessary given main class has something simmilar?)
+	} //(is this unnecessary given main class has something simmilar?) */
 
 }
 

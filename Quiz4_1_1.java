@@ -116,6 +116,8 @@ public class Quiz4_1_1 {
                 //System.out.print(studentList.get(i).studentCourses.get(j).toString());
                 studentList.get(i).studentCourses.get(j).printCourse();
             }
+            // print Student objects' total credits:
+            System.out.print("Total Credits: " + studentList.getStudentCredits());
         }
     }
 

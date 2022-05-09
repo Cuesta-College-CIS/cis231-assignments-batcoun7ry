@@ -2,23 +2,38 @@ import java.util.ArrayList;
 
 public class Course {
 
-	// Course object fields/attributes:
-	private String courseID;
-	private String courseName;
-	private Integer courseCredit;
-	private String grade; 
-	private ArrayList<Student> courseEnrolment; // why "ArrayList cannot be resolved to a type"?
+	// course object fields/attributes:
+	String courseID = "no course ID";
+	String courseName = "no course name";
+	Integer courseCredit = -1;
+	String studentGrade = "no grade"; 
+	ArrayList<Student> courseEnrolment = new ArrayList<Student>(); 
 
-	// constructor initilizes course ID, name, credits, and enrolment:
+	// constructor sets courseID, courseName, courseCredits, and studentGrade:
 	public Course(String courseID, String courseName, Integer courseCredit, String studentGrade) {
 		this.courseID = courseID;
 		this.courseName = courseName;
 		this.courseCredit = courseCredit;
-		this.grade = grade;
+		this.studentGrade = studentGrade;
 	}
 
-	public String toString() {
+	public String toString() { // not gonna use this since I cant format the text
 		//override toString() to print the course object
+		String printedCourse = "     Course: " +
+		courseID.toString() + "  " +
+		courseName.toString() + "  " +
+		courseCredit.toString() + "  " +
+		studentGrade.toString() + "\n";
+
+		return printedCourse;
+	}
+
+	public void printCourse() { // this lets me format the text
+		String outputFormat = "      Course: %-7s%-7s%-4s%-4s"; // why is this not perfect?
+		System.out.printf(outputFormat, 	courseID.toString(),
+											courseName.toString(),
+											courseCredit.toString(),
+											studentGrade.toString()+ "\n");
 	}
 }
 

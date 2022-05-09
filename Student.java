@@ -31,8 +31,18 @@ public class Student {
 		return studentName;
 	}
 
+	// getter: return String of Student object courses:
+	public String getStudentCourses() {
+		String printStudentCourses = " ";
+		for (int i = 0; i < studentCourses.size(); i++) {
+			printStudentCourses += studentCourses.get(i) + " : ";
+
+		}
+		return printStudentCourses;
+	}
+
 	// getter: return ArrayList of Student object courses:
-	public ArrayList<Course> getStudentCourses() {
+	public ArrayList<Course> getStudentCoursesAL() {
 		return studentCourses;
 	}
 
@@ -41,12 +51,12 @@ public class Student {
 		return studentCredits;
 	}
 
-/* 	// getter: print string of Student object attributes:
+	// getter: print string of Student object attributes:
 	public String toString() {
 		// TODO: make studentSummary string
 
 		return studentSummary;
-	} //(is this unnecessary given main class has something simmilar?)*/
+	} //(is this unnecessary given main class has something simmilar?)
 
 }
 

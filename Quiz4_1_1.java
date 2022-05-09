@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.File; // do I need this?
@@ -87,7 +88,7 @@ public class Quiz4_1_1 {
                 // populate a Course object with above data:
                 Course currentCourse = new Course(  courseID, courseName, 
                                                     courseCredit, studentGrade);
-                // push above course object into currentStudent's ArrayList of courses:
+                // push above Course object into currentStudent's ArrayList of courses:
                 currentStudent.addStudentCourse(currentCourse);
             }
 
@@ -98,9 +99,7 @@ public class Quiz4_1_1 {
         inFS.close(); // vscode gets mad if I dont have this
         fileByteStream.close();
         
-
         return studentList;
-
     }
 
     // print studentList:
@@ -109,16 +108,15 @@ public class Quiz4_1_1 {
         // iterate throguh studentList and print each Student object's fields/attributes:
         for (int i = 0; i < studentList.size(); i++) {
             // Student ID and name:
-            System.out.printf("Student: %-6s%-10s", studentList.get(i).getStudentID(),
-            studentList.get(i).getStudentName());
+            System.out.printf("Student: %-6s%-10s",  studentList.get(i).getStudentID(),
+                                                            studentList.get(i).getStudentName());
             System.out.print("\n");
             // Iterate thorugh and print Student courses, line by line:
             for (int j = 0; j < studentList.get(i).studentCourses.size(); j++) {
-                System.out.print(studentList.get(i).studentCourses.get(j)); // This does not work
+                //System.out.print(studentList.get(i).studentCourses.get(j).printCourse());
+                studentList.get(i).studentCourses.get(j).printCourse();
             }
-            
         }
-        
     }
 
 /*     public static void printStudent(ArrayList<Student> studentList, Integer studentID) {
@@ -136,6 +134,7 @@ public class Quiz4_1_1 {
         ArrayList <Student> studentList = fillStudentList();
         //printStudent =(studentList);
         //studentID = findStudent(studentList);
+
 
         //printStudent(studentList, studentID);
         printStudent(studentList);

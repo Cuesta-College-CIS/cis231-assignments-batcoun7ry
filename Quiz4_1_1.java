@@ -117,8 +117,10 @@ public class Quiz4_1_1 {
                 studentList.get(i).studentCourses.get(j).printCourse();
             }
             // print Student objects' total credits:
-            System.out.print("Total Credits: " + studentList.getStudentCredits());
+            System.out.println("\n      Total Credits:  (I could not solve this in time)" + "\n   ");
         }
+        // print the student with the most credits:
+        System.out.print("The student with the most credits: (I could not solve this in time)");
     }
 
 /*     public static void printStudent(ArrayList<Student> studentList, Integer studentID) {

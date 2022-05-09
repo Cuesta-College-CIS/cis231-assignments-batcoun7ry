@@ -8,6 +8,7 @@ public class Student {
 	private Integer studentCredits = 0;
 	ArrayList<Course> studentCourses = new ArrayList<Course>();
 	private String studentSummary = "blank";
+	Integer totalCredits;
 
 
 	// constructor sets Student's ID and name:
@@ -51,7 +52,8 @@ public class Student {
 		Integer creditSum = 0;
 		for (int i = 0; i < studentCourses.size(); i++) {
 			creditSum += studentCourses.get(i).courseCredit;
-			}
+		}
+		totalCredits = creditSum;
 		return studentCredits;
 	}
 

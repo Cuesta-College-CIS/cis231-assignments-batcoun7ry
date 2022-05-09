@@ -35,6 +35,10 @@ public class Course {
 											courseCredit.toString(),
 											studentGrade.toString()+ "\n");
 	}
+
+	public Integer returnCourseCredit() {
+		return courseCredit;
+	}
 }
 
 

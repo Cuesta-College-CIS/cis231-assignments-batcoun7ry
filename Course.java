@@ -29,7 +29,7 @@ public class Course {
 	}
 
 	public void printCourse() { // this lets me format the text
-		String outputFormat = "      Course: %-7s%-7s%-4s%-4s"; // why is this not perfect?
+		String outputFormat = "      Course: %-7s%-7s%-4s%-4s"; // why is output not perfect?
 		System.out.printf(outputFormat, 	courseID.toString(),
 											courseName.toString(),
 											courseCredit.toString(),

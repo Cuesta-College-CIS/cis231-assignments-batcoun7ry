@@ -113,7 +113,7 @@ public class Quiz4_1_1 {
             System.out.print("\n");
             // Iterate thorugh and print Student courses, line by line:
             for (int j = 0; j < studentList.get(i).studentCourses.size(); j++) {
-                //System.out.print(studentList.get(i).studentCourses.get(j).printCourse());
+                //System.out.print(studentList.get(i).studentCourses.get(j).toString());
                 studentList.get(i).studentCourses.get(j).printCourse();
             }
         }

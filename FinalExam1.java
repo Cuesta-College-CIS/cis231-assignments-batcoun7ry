@@ -27,12 +27,12 @@ import java.util.Arrays;
 public class FinalExam1 {
 
     // populate and return an 'n' sized array of random positive integers between 0 and 99:
-    public static int[] fillArray(int n) {
+    public static ArrayList fillArray(Integer n) {
         Random randGen = new Random();
-        ArrayList <Integer> nArrayList = new ArrayList<>();
+        ArrayList <Integer> nArrayList = new ArrayList<>(n);
 
-        for (int i = 0; i < n; i++) {
-            nArrayList.set(i) = randGen.nextInt(99);
+        for (Integer i = 0; i < nArrayList.size(); i++) {
+            nArrayList.set(i, randGen.nextInt(99));
         }
 
         return nArrayList;
@@ -52,7 +52,7 @@ public class FinalExam1 {
 
         // prompt user for 'n' elements of array:
         System.out.println("Please input a positive integer for 'n' elements of an array.");
-        int n = scnr.nextInt();
+        Integer n = scnr.nextInt();
 
         // pass 'n' to a method that populates an array of 'n' random integers between 0 and 99.
 

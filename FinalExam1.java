@@ -41,9 +41,8 @@ public class FinalExam1 {
     public static int [] sortArray(int[] nArray) {
 
         // new array into which min elements of nArray will get sequentially pushed
-        int [] nSortedArray = new int [nArray.length];
-        Arrays.sort(nSortedArray);
-        return nSortedArray;
+        Arrays.sort(nArray);
+        return nArray;
     }
 
     public static void main(String args[]) {
@@ -54,24 +53,24 @@ public class FinalExam1 {
         int n = scnr.nextInt();
 
         // pass 'n' to a method that populates an array of 'n' random integers between 0 and 99.
-        int nArray [] = fillArray(n);
+        int [] nArray = fillArray(n);
 
         // report to the user what their array looks like:
-        System.out.println("Your array of " + n + " elements looks like this:");
+        System.out.println("\nYour array of " + n + " elements looks like this:");
         System.out.println(Arrays.toString(nArray));
 
         // pass the array to a method that sorts the array:
-        int [] nSortedArray = sortArray(nArray);
+        nArray = sortArray(nArray);
 
         // report to the user their sorted array:
-        System.out.println("Your array of " + n + " elements has been sorted:");
-        System.out.println(Arrays.toString(nSortedArray));
+        System.out.println("\nYour array of " + n + " elements has been sorted:");
+        System.out.println(Arrays.toString(nArray));
 
 
         // pass the sorted array to a method that finds its median:
 
 
         // report to the user what the median of their array is:
-        System.out.println("The median of that array is: ");
+        System.out.println("\nThe median of that array is: ");
     }    
 } 

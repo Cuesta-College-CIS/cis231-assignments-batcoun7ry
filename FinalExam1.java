@@ -20,6 +20,7 @@ Find the median value:
 
 import java.util.Scanner;
 import java.util.Random;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -28,35 +29,22 @@ public class FinalExam1 {
     // populate and return an 'n' sized array of random positive integers between 0 and 99:
     public static int[] fillArray(int n) {
         Random randGen = new Random();
-        int [] nArray = new int[n];
+        ArrayList <Integer> nArrayList = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
-            nArray[i] = randGen.nextInt(99);
+            nArrayList.set(i) = randGen.nextInt(99);
         }
 
-        return nArray;
+        return nArrayList;
     }
 
     // recieve an array of positive integers, sort, and return the array:
-    public static int [] sortArray(int[] nArray) {
+    public static ArrayList sortArray(ArrayList nArrayList) {
 
         // new array into which min elements of nArray will get sequentially pushed
-        int [] nSortedArray = new int [nArray.length];
-        int currentMinValue = -1; // initialize current min value
+        ArrayList <Integer> nSortedArrayList = new ArrayList<>();
 
-        // nested for loop: child loop pushes min value of nArray sequentially to nSortedArray
-        for (int i = 0; i < nArray.length; i++) {
-            currentMinValue = nArray[i]; // re-initialize currentMinValue to new set of unchecked elements
-            // calcualte min value among unchecked elements of nArray
-            for (int j = i; j < nArray.length; j++) {
-                if (nArray[j] < currentMinValue) {
-                    currentMinValue = nArray[j];
-                }
-            }
-            // sequentially push currentMinValue to nSortedArray
-            nSortedArray[i] = currentMinValue;
-        }
-        return nSortedArray;
+        return nSortedArrayList;
     }
     
 	public static void main(String args[]) {
@@ -67,24 +55,25 @@ public class FinalExam1 {
         int n = scnr.nextInt();
 
         // pass 'n' to a method that populates an array of 'n' random integers between 0 and 99.
-        int nArray [] = fillArray(n);
+
+
+
 
         // report to the user what their array looks like:
-        System.out.println("Your array of " + n + " elements looks like this:");
-        System.out.println(Arrays.toString(nArray));
+        System.out.println("\nYour array of " + n + " elements looks like this:");
+
 
         // pass the array to a method that sorts the array:
-        int [] nSortedArray = sortArray(nArray);
+
         
         // report to the user their sorted array:
-        System.out.println("Your array of " + n + " elements has been sorted:");
-        System.out.println(Arrays.toString(nSortedArray));
+        System.out.println("\nYour array of " + n + " elements has been sorted:");
 
 
         // pass the sorted array to a method that finds its median:
 
 
         // report to the user what the median of their array is:
-        System.out.println("The median of that array is: ");
+        System.out.println("\nThe median of that array is: ");
 	}    
 }

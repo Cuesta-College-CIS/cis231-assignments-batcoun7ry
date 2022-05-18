@@ -39,10 +39,14 @@ public class FinalExam1 {
 
     // recieve an array of positive integers, sort, and return the array:
     public static int [] sortArray(int[] nArray) {
-
-        // new array into which min elements of nArray will get sequentially pushed
         Arrays.sort(nArray);
         return nArray;
+    }
+
+    // find median of sorted array:
+    public static int findMedian(int[] nArray) {
+        int median = nArray[nArray.length/2];
+        return median;
     }
 
     public static void main(String args[]) {
@@ -68,9 +72,9 @@ public class FinalExam1 {
 
 
         // pass the sorted array to a method that finds its median:
-
+        int median = findMedian(nArray); 
 
         // report to the user what the median of their array is:
-        System.out.println("\nThe median of that array is: ");
+        System.out.println("\nThe median of that array is: " + median);
     }    
 } 

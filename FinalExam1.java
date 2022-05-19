@@ -25,6 +25,8 @@ import java.util.Arrays;
 
 public class FinalExam1 {
 
+
+
     // populate and return an 'n' sized array of random positive integers between 0 and 99:
     public static int[] fillArray(int n) {
         Random randGen = new Random();
@@ -33,9 +35,11 @@ public class FinalExam1 {
         for (int i = 0; i < n; i++) {
             nArray[i] = randGen.nextInt(99);
         }
-
         return nArray;
     }
+
+
+
 
     // recieve an array of positive integers, sort, and return the array:
     public static int [] sortArray(int[] nArray) {
@@ -43,11 +47,38 @@ public class FinalExam1 {
         return nArray;
     }
 
+
+
+
     // find median of sorted array:
     public static int findMedian(int[] nArray) {
         int median = nArray[nArray.length/2];
         return median;
     }
+
+
+
+
+    // find max subsequence of length m of unsorted array:
+    public static int [] findMaxSubsequence(int[] nArray){
+        int [] maxSubsequence = new int [3];
+        int currentMaxSub = -1;
+
+        for (int i = 0; i < maxSubsequence.length - 2; i++) {
+            if ( (nArray[i] + nArray[i + 1] + nArray[i + 2]) > currentMaxSub) {
+                currentMaxSub = nArray[i] + nArray[i + 1] + nArray[i + 2];
+
+                // fill array MaxSubsequence with the current max subsequence:
+                maxSubsequence[0] = nArray[i + 0];
+                maxSubsequence[1] = nArray[i + 1];
+                maxSubsequence[2] = nArray[i + 2];
+            }
+        }
+        return maxSubsequence;
+    }
+
+
+    
 
     public static void main(String args[]) {
         Scanner scnr = new Scanner(System.in);
@@ -63,6 +94,10 @@ public class FinalExam1 {
         System.out.println("\nYour array of " + n + " elements looks like this:");
         System.out.println(Arrays.toString(nArray));
 
+        // report to the user what the max subsequence of 3 elements is:
+        int [] maxSubsequence = findMaxSubsequence(nArray);
+        System.out.println("\nThe maximum subsequence of 3 integers is " + Arrays.toString(maxSubsequence));
+
         // pass the array to a method that sorts the array:
         nArray = sortArray(nArray);
 
@@ -76,5 +111,6 @@ public class FinalExam1 {
 
         // report to the user what the median of their array is:
         System.out.println("\nThe median of that array is: " + median);
+
     }    
 } 

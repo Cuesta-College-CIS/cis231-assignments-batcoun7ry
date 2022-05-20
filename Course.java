@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Course {
+public class Course implements CourseActivity{
 
 	// course object fields/attributes:
 	String courseID = "no course ID";
@@ -17,6 +17,28 @@ public class Course {
 		this.studentGrade = studentGrade;
 	}
 
+	// constructor for FinalExam3:
+	public Course(String courseID, String courseName, Integer courseCredit) {
+		this.courseID = courseID;
+		this.courseName = courseName;
+		this.courseCredit = courseCredit;
+	}
+
+
+	// implement determineGrade:
+	public String determineGrade() {
+		return "A";
+	}
+
+	// implement printCourseInfo:
+	public void printCourseInfo() {
+		String outputFormat = "      Course: %-7s%-7s%-4s%-4s";
+		System.out.printf(outputFormat, 	courseID.toString(),
+											courseName.toString(),
+											courseCredit.toString(),
+											studentGrade.toString()+ "\n");
+	}
+	
 	public String toString() { // not gonna use this since I cant format the text
 		//override toString() to print the course object
 		String printedCourse = "     Course: " +

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Student {
+public class Student extends Person {
 
 	// Student objects's fields/attributes:
 	private Integer studentID = -1;
@@ -15,6 +15,13 @@ public class Student {
 	public Student(Integer id, String name) {
 		studentID = id;
 		studentName = name;
+	}
+
+	// constructor for FinalExam3:
+	Student(String name, String DOB, Integer studentID, Integer studentCredits) {
+		super(name, DOB);
+		this.studentID = studentID;
+		this.studentCredits = studentCredits;
 	}
 
 	// setter: add a course object to Student object's ArrayList of courses:
